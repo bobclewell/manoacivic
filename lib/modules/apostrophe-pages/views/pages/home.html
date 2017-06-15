@@ -1,0 +1,13 @@
+{% extends data.outerLayout %}
+
+{% block title %}{{ super() }} | Home{% endblock %}
+
+{% block main %}
+Here.
+  <div class="hero-image-foo">
+      {{ apos.singleton(data.page, 'heroImage', 'hero-images', {
+        limit: 1
+      }) }}
+  </div>
+
+{% endblock %}
