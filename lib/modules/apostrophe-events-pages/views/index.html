@@ -1,0 +1,15 @@
+{% extends data.outerLayout %}
+{% block title %}{{ data.page.title }}{% endblock %}
+
+{% block main %}
+  {% for piece in data.pieces %}
+    <div class="apos-event-preview">
+      <h4 class="apos-event-title"><a href="{{ piece._url }}">{{ piece.title }}</a></h4>
+      {% set image = apos.images.first(piece.image) %}
+      {% if image %}
+        <img src="{{ apos.attachments.url(image, { size: 'one-half' }) }}" />
+      {% endif %}
+      <h5 class="apos-event-date">{{ piece.start | date('MMMM Do') }} at {{ piece.start | date('h:mma') }}</h5>
+    </div>
+  {% endfor %}
+{% endblock %}
