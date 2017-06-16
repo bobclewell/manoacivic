@@ -25,12 +25,22 @@
     </div>
     <div class=" col-sm-4">
       <a href="https://www.facebook.com/ManoaCivic/" target="_blank">
-        <p>Connect via Facebook.</p>
         <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+        <p>Connect via Facebook.</p>
       </a>
     </div>
   </div>
   <div class="row">
+    <div class="col-sm-6">
+      Fun Times!
+    </div>
+    <div class="col-sm-6">
+      <h3>Up Next:</h3>
+      {{ apos.singleton(data.page, 'nextEvent', 'apostrophe-events', {
+        limit: 1
+      }) }}
+      <a href="/events">all events</a>
+    </div>
   </div>
 </div>
 
