@@ -2,7 +2,10 @@ var apos = require('apostrophe')({
   shortName: 'manoa',
   title: 'manoa',
 
-  bundles: [ 'apostrophe-events' ],
+  bundles: [
+    'apostrophe-events',
+    'apostrophe-blog'
+  ],
   modules: {
     'apostrophe-express': {
       session: {
@@ -12,6 +15,9 @@ var apos = require('apostrophe')({
     'apostrophe-events': {},
     'apostrophe-events-pages': {},
     'apostrophe-events-widgets': {},
+    'apostrophe-blog': {},
+    'apostrophe-blog-pages': {},
+    'apostrophe-blog-widgets': {},
     'hero-images-widgets': {},
   }
 });
