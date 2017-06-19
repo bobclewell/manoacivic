@@ -11,8 +11,22 @@
       }) }}
   </div>
   <div class="row">
+    <div class="col-sm-6">
+      {{ apos.singleton(data.page, 'featureArticle', 'apostrophe-blog', {
+        limit: 1
+      }) }}
+    </div>
+    <div class="col-sm-6">
+      {{ apos.singleton(data.page, 'nextEvent', 'apostrophe-events', {
+        limit: 1
+      }) }}
+    </div>
+  </div>
+  <div class="row">
     <div class="col-sm-4">
-      Sign-up to our mailing list to be the first to know about MCA activities and events.
+      {{ apos.singleton(data.page, 'specialHtmlAreaForm', 'contact-form', {
+        limit: 1
+      }) }}
     </div>
     <div class="col-sm-4">
       {{ apos.singleton(data.page, 'specialHtmlArea1', 'apostrophe-html', {
@@ -21,18 +35,6 @@
     </div>
     <div class="col-sm-4">
       {{ apos.singleton(data.page, 'specialHtmlArea2', 'apostrophe-html', {
-        limit: 1
-      }) }}
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-      {{ apos.singleton(data.page, 'featureArticle', 'apostrophe-blog', {
-        limit: 1
-      }) }}
-    </div>
-    <div class="col-sm-6">
-      {{ apos.singleton(data.page, 'nextEvent', 'apostrophe-events', {
         limit: 1
       }) }}
     </div>

@@ -19,5 +19,7 @@ var apos = require('apostrophe')({
     'apostrophe-blog-pages': {},
     'apostrophe-blog-widgets': {},
     'hero-images-widgets': {},
+    'contact-form': {},
+    'contact-form-widgets': {},
   }
 });

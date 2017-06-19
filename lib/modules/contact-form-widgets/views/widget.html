@@ -1,0 +1,14 @@
+{% import "apostrophe-schemas:macros.html" as schemas %}
+
+<form class="contact-form form-group" data-contact-form>
+  <h4>Sign-up to our mailing list</h4>
+  <p>
+    Be among the first to know about MCA activities and events.
+  </p>
+  {{ schemas.fields(data.schema, { tabs: false }) }}
+  <button type="submit" class="btn btn-success">Submit</button>
+  {# Later gets hoisted out and becomes visible #}
+  <div class="thank-you" data-thank-you>
+    <p class="bg-success">Thank you for signing up! You'll be hearing from us soon.</p>
+  </div>
+</form>
