@@ -1,0 +1,16 @@
+{% for piece in data.widget._pieces %}
+  {% if piece._url %}<a href="{{ piece._url }}">{% endif %}
+    <h3>{{ piece.title }}</h3>
+  {% if piece._url %}</a>{% endif %}
+  {{
+    apos.singleton(
+      piece,
+      'article',
+      'apostrophe-rich-text',
+      {
+        edit: false
+      }
+    )
+  }}
+{% endfor %}
+<a href="/articles">all articles</a>
