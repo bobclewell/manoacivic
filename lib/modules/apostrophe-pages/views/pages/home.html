@@ -1,14 +1,16 @@
-<div class="container">
+
 {% extends data.outerLayout %}
 
 {% block title %}{{ super() }} | Home{% endblock %}
 
 {% block main %}
-  <div class="hero-image-foo">
-    Big Marquee here..
-      {{ apos.singleton(data.page, 'heroImage', 'hero-images', {
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      {{ apos.singleton(data.page, 'mainImage', 'apostrophe-images', {
         limit: 1
       }) }}
+    </div>
   </div>
   <div class="row">
     <div class="col-sm-6">
@@ -39,5 +41,5 @@
       }) }}
     </div>
   </div>
-{% endblock %}
 </div>
+{% endblock %}
