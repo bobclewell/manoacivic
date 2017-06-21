@@ -2,6 +2,7 @@
 {% block title %}{{ data.piece.title }}{% endblock %}
 
 {% block main %}
+<div class="container-fluid">
   <div class="apos-event-preview">
     <h3 class="apos-event-title">{{ data.piece.title }}</h3>
     {% set image = apos.images.first(data.piece.image) %}
@@ -10,4 +11,5 @@
     {% endif %}
     <h5 class="apos-event-date">{{ data.piece.start | date('MMMM Do') }} at {{ data.piece.start | date('h:mma') }}</h5>
   </div>
+</div>
 {% endblock %}

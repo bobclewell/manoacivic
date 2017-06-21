@@ -24,21 +24,27 @@
       }) }}
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-4">
-      {{ apos.singleton(data.page, 'specialHtmlAreaForm', 'contact-form', {
-        limit: 1
-      }) }}
+  <div class="row action-row">
+    <div class="col-sm-4 text-center">
+      <div class="action-item">
+        {{ apos.singleton(data.page, 'specialHtmlAreaForm', 'contact-form', {
+          limit: 1
+        }) }}
+      </div>
     </div>
-    <div class="col-sm-4">
-      {{ apos.singleton(data.page, 'specialHtmlArea1', 'apostrophe-html', {
-        limit: 1
-      }) }}
+    <div class="col-sm-4 text-center">
+      <div class="action-item paypal-item">
+        {{ apos.singleton(data.page, 'specialHtmlArea1', 'apostrophe-html', {
+          limit: 1
+        }) }}
+      </div>
     </div>
-    <div class="col-sm-4">
-      {{ apos.singleton(data.page, 'specialHtmlArea2', 'apostrophe-html', {
-        limit: 1
-      }) }}
+    <div class="col-sm-4 text-center">
+      <div class="action-item facebook-item">
+        {{ apos.singleton(data.page, 'specialHtmlArea2', 'apostrophe-html', {
+          limit: 1
+        }) }}
+      </div>
     </div>
   </div>
 </div>
