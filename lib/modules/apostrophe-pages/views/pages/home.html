@@ -15,6 +15,21 @@
     <div class="col-sm-6">
       <div class="action-item">
         <!-- TEMP: just an simple area goes here -->
+        {{ apos.area(data.page, 'rightColumn', {
+          widgets: {
+            'apostrophe-images': {
+              size: 'full'
+            },
+            'apostrophe-rich-text': {
+              toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink' ],
+              styles: [
+                { name: 'Heading', element: 'h3' },
+                { name: 'Subheading', element: 'h4' },
+                { name: 'Paragraph', element: 'p' }
+              ]
+            }
+          }
+        }) }}
       </div>
     </div>
     <div class="col-sm-6">
