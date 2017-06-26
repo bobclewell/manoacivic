@@ -3,7 +3,7 @@
 {% block title %}{{ super() }} | Home{% endblock %}
 
 {% block main %}
-<div class="container">
+<div class="container manoa-main">
   <div class="row">
     <div class="col-sm-12">
       {{ apos.singleton(data.page, 'mainImage', 'apostrophe-images', {
@@ -13,14 +13,18 @@
   </div>
   <div class="row">
     <div class="col-sm-6">
-      {{ apos.singleton(data.page, 'featureArticle', 'apostrophe-blog', {
-        limit: 1
-      }) }}
+      <div class="action-item">
+        {{ apos.singleton(data.page, 'featureArticle', 'apostrophe-blog', {
+          limit: 1
+        }) }}
+      </div>
     </div>
     <div class="col-sm-6">
-      {{ apos.singleton(data.page, 'nextEvent', 'apostrophe-events', {
-        limit: 1
-      }) }}
+      <div class="action-item">
+        {{ apos.singleton(data.page, 'nextEvent', 'apostrophe-events', {
+          limit: 1
+        }) }}
+      </div>
     </div>
   </div>
   <div class="row action-row">

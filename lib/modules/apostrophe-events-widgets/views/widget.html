@@ -5,16 +5,14 @@
     {% if piece._url %}</a>{% endif %}
   </h3>
 
-  <h4>
-    {% if piece._url %}<a href="{{ piece._url }}">{% endif %}
-      {% set image = apos.images.first(piece.image) %}
-      {% if image %}
-        <img class="img-responsive" src="{{ apos.attachments.url(image, {}) }}" />
-      {% endif %}
-    {% if piece._url %}</a>{% endif %}
-  </h4>
+  {% if piece._url %}<a href="{{ piece._url }}">{% endif %}
+    {% set image = apos.images.first(piece.image) %}
+    {% if image %}
+      <img class="img-responsive" src="{{ apos.attachments.url(image, {}) }}" />
+    {% endif %}
+  {% if piece._url %}</a>{% endif %}
   <p>{{ piece.description }}</p>
 {% endfor %}
-<div class="text-center">
+<p class="text-center">
   <a href="/events"><i class="fa fa-calendar"></i>&nbsp;View all events</a>
-</div>
+</p>
