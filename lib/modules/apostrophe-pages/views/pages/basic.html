@@ -1,0 +1,30 @@
+{% extends data.outerLayout %}
+
+{% block title %}{{ super() }} | Home{% endblock %}
+
+{% block main %}
+<div class="container manoa-main">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="action-item">
+        <!-- TEMP: just an simple area goes here -->
+        {{ apos.area(data.page, 'basicPageCenter', {
+          widgets: {
+            'apostrophe-images': {
+              size: 'full'
+            },
+            'apostrophe-rich-text': {
+              toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink' ],
+              styles: [
+                { name: 'Heading', element: 'h3' },
+                { name: 'Subheading', element: 'h4' },
+                { name: 'Paragraph', element: 'p' }
+              ]
+            }
+          }
+        }) }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
