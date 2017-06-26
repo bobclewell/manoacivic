@@ -3,8 +3,7 @@ var apos = require('apostrophe')({
   title: 'manoa',
 
   bundles: [
-    'apostrophe-events',
-    'apostrophe-blog'
+    'apostrophe-events'
   ],
   modules: {
     'apostrophe-express': {
@@ -15,9 +14,6 @@ var apos = require('apostrophe')({
     'apostrophe-events': {},
     'apostrophe-events-pages': {},
     'apostrophe-events-widgets': {},
-    'apostrophe-blog': {},
-    'apostrophe-blog-pages': {},
-    'apostrophe-blog-widgets': {},
     'hero-images-widgets': {},
     'contact-form': {},
     'contact-form-widgets': {},
