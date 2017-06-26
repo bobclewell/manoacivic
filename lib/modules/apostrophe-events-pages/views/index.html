@@ -2,16 +2,20 @@
 {% block title %}{{ data.page.title }}{% endblock %}
 
 {% block main %}
-<div class="container">
-  {% for piece in data.pieces %}
-    <div class="apos-event-preview text-center">
-      <h3 class="apos-event-title"><a href="{{ piece._url }}">{{ piece.title }} - {{ piece.start | date('MMMM Do') }} at {{ piece.start | date('h:mma') }}</a></h3>
-      {% set image = apos.images.first(piece.image) %}
-      {% if image %}
-        <img src="{{ apos.attachments.url(image, { size: 'one-half' }) }}" />
-      {% endif %}
-      <p>{{ piece.description }}</p>
+<div class="container manoa-main">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+    {% for piece in data.pieces %}
+      <div class="apos-event-preview text-center">
+        <h3 class="apos-event-title"><a href="{{ piece._url }}">{{ piece.title }} - {{ piece.start | date('MMMM Do') }} at {{ piece.start | date('h:mma') }}</a></h3>
+        {% set image = apos.images.first(piece.image) %}
+        {% if image %}
+          <img src="{{ apos.attachments.url(image, { size: 'one-half' }) }}" />
+        {% endif %}
+        <p>{{ piece.description }}</p>
+      </div>
+    {% endfor %}
     </div>
-  {% endfor %}
+  </div>
 </div>
 {% endblock %}
